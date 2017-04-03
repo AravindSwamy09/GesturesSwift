@@ -12,6 +12,12 @@
 		490479CD1E923B4C00CA1BA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490479CB1E923B4C00CA1BA7 /* Main.storyboard */; };
 		490479CF1E923B4C00CA1BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 490479CE1E923B4C00CA1BA7 /* Assets.xcassets */; };
 		490479D21E923B4C00CA1BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 490479D01E923B4C00CA1BA7 /* LaunchScreen.storyboard */; };
+		490479E01E923BE700CA1BA7 /* banana.png in Resources */ = {isa = PBXBuildFile; fileRef = 490479DA1E923BE700CA1BA7 /* banana.png */; };
+		490479E11E923BE700CA1BA7 /* banana@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490479DB1E923BE700CA1BA7 /* banana@2x.png */; };
+		490479E21E923BE700CA1BA7 /* chomp.caf in Resources */ = {isa = PBXBuildFile; fileRef = 490479DC1E923BE700CA1BA7 /* chomp.caf */; };
+		490479E31E923BE700CA1BA7 /* hehehe1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 490479DD1E923BE700CA1BA7 /* hehehe1.caf */; };
+		490479E41E923BE700CA1BA7 /* monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 490479DE1E923BE700CA1BA7 /* monkey.png */; };
+		490479E51E923BE700CA1BA7 /* monkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490479DF1E923BE700CA1BA7 /* monkey@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		490479CE1E923B4C00CA1BA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		490479D11E923B4C00CA1BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		490479D31E923B4C00CA1BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		490479DA1E923BE700CA1BA7 /* banana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banana.png; sourceTree = "<group>"; };
+		490479DB1E923BE700CA1BA7 /* banana@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "banana@2x.png"; sourceTree = "<group>"; };
+		490479DC1E923BE700CA1BA7 /* chomp.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chomp.caf; sourceTree = "<group>"; };
+		490479DD1E923BE700CA1BA7 /* hehehe1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hehehe1.caf; sourceTree = "<group>"; };
+		490479DE1E923BE700CA1BA7 /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
+		490479DF1E923BE700CA1BA7 /* monkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monkey@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +70,24 @@
 				490479C91E923B4C00CA1BA7 /* ViewController.swift */,
 				490479CB1E923B4C00CA1BA7 /* Main.storyboard */,
 				490479CE1E923B4C00CA1BA7 /* Assets.xcassets */,
+				490479D91E923BE700CA1BA7 /* MonkeyPinchResources */,
 				490479D01E923B4C00CA1BA7 /* LaunchScreen.storyboard */,
 				490479D31E923B4C00CA1BA7 /* Info.plist */,
 			);
 			path = MonkeyPinch;
+			sourceTree = "<group>";
+		};
+		490479D91E923BE700CA1BA7 /* MonkeyPinchResources */ = {
+			isa = PBXGroup;
+			children = (
+				490479DA1E923BE700CA1BA7 /* banana.png */,
+				490479DB1E923BE700CA1BA7 /* banana@2x.png */,
+				490479DC1E923BE700CA1BA7 /* chomp.caf */,
+				490479DD1E923BE700CA1BA7 /* hehehe1.caf */,
+				490479DE1E923BE700CA1BA7 /* monkey.png */,
+				490479DF1E923BE700CA1BA7 /* monkey@2x.png */,
+			);
+			path = MonkeyPinchResources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,9 +149,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				490479E41E923BE700CA1BA7 /* monkey.png in Resources */,
+				490479E21E923BE700CA1BA7 /* chomp.caf in Resources */,
 				490479D21E923B4C00CA1BA7 /* LaunchScreen.storyboard in Resources */,
 				490479CF1E923B4C00CA1BA7 /* Assets.xcassets in Resources */,
+				490479E51E923BE700CA1BA7 /* monkey@2x.png in Resources */,
+				490479E11E923BE700CA1BA7 /* banana@2x.png in Resources */,
+				490479E01E923BE700CA1BA7 /* banana.png in Resources */,
 				490479CD1E923B4C00CA1BA7 /* Main.storyboard in Resources */,
+				490479E31E923BE700CA1BA7 /* hehehe1.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
