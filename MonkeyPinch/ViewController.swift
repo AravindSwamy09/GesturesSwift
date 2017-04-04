@@ -52,6 +52,23 @@ class ViewController: UIViewController {
         }
         
     }
+    @IBAction func handlePinch(_ sender: UIPinchGestureRecognizer) {
+        
+        if let view = sender.view {
+            view.transform = view.transform.scaledBy(x: sender.scale, y: sender.scale)
+            sender.scale = 1
+        }
+        
+    }
+    
+    @IBAction func handleRotate(_ sender: UIRotationGestureRecognizer) {
+        
+        if let view = sender.view {
+            view.transform = view.transform.rotated(by: sender.rotation)
+            sender.rotation = 0
+        }
+        
+    }
 
 }
 
