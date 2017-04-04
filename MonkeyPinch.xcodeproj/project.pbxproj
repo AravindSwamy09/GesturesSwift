@@ -18,6 +18,7 @@
 		490479E31E923BE700CA1BA7 /* hehehe1.caf in Resources */ = {isa = PBXBuildFile; fileRef = 490479DD1E923BE700CA1BA7 /* hehehe1.caf */; };
 		490479E41E923BE700CA1BA7 /* monkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 490479DE1E923BE700CA1BA7 /* monkey.png */; };
 		490479E51E923BE700CA1BA7 /* monkey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490479DF1E923BE700CA1BA7 /* monkey@2x.png */; };
+		49E506C21E93D91D00DFB68B /* TickleGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E506C11E93D91D00DFB68B /* TickleGestureRecognizer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		490479DD1E923BE700CA1BA7 /* hehehe1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = hehehe1.caf; sourceTree = "<group>"; };
 		490479DE1E923BE700CA1BA7 /* monkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monkey.png; sourceTree = "<group>"; };
 		490479DF1E923BE700CA1BA7 /* monkey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "monkey@2x.png"; sourceTree = "<group>"; };
+		49E506C11E93D91D00DFB68B /* TickleGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickleGestureRecognizer.swift; sourceTree = "<group>"; };
+		49E506C31E93DAD100DFB68B /* MonkeyPinch-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MonkeyPinch-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 			children = (
 				490479C71E923B4C00CA1BA7 /* AppDelegate.swift */,
 				490479C91E923B4C00CA1BA7 /* ViewController.swift */,
+				49E506C11E93D91D00DFB68B /* TickleGestureRecognizer.swift */,
+				49E506C31E93DAD100DFB68B /* MonkeyPinch-Bridging-Header.h */,
 				490479CB1E923B4C00CA1BA7 /* Main.storyboard */,
 				490479CE1E923B4C00CA1BA7 /* Assets.xcassets */,
 				490479D91E923BE700CA1BA7 /* MonkeyPinchResources */,
@@ -122,6 +127,7 @@
 				TargetAttributes = {
 					490479C31E923B4C00CA1BA7 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -169,6 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				490479CA1E923B4C00CA1BA7 /* ViewController.swift in Sources */,
+				49E506C21E93D91D00DFB68B /* TickleGestureRecognizer.swift in Sources */,
 				490479C81E923B4C00CA1BA7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,11 +299,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MonkeyPinch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngagroupinc.MonkeyPinch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyPinch/MonkeyPinch-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -305,11 +315,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MonkeyPinch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ngagroupinc.MonkeyPinch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MonkeyPinch/MonkeyPinch-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -333,6 +345,7 @@
 				490479D81E923B4C00CA1BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

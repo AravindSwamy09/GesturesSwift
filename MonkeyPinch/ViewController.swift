@@ -12,6 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
 
     var chompPlayer:AVAudioPlayer?
+    var hehePlayer:AVAudioPlayer?
     
     @IBOutlet var monkeyPan: UIPanGestureRecognizer!
     @IBOutlet var bananaPan: UIPanGestureRecognizer!
@@ -35,6 +36,9 @@ class ViewController: UIViewController {
         for view in filteredSubViews {
            //3
             let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+            let recognizer2 = TickleGestureRecognizer(target: self, action: #selector(handleTickle(recognizer:)))
+            recognizer2.delegate = self
+            view.addGestureRecognizer(recognizer2)
             //4
             recognizer.delegate = self
             view.addGestureRecognizer(recognizer)
@@ -45,10 +49,15 @@ class ViewController: UIViewController {
         }
         
         self.chompPlayer = self.loadSound(fileName: "chomp")
+        self.hehePlayer = self.loadSound(fileName: "hehehe1")
     }
 
     func handleTap(recognizer:UITapGestureRecognizer) {
         self.chompPlayer?.play()
+    }
+    
+    func handleTickle(recognizer:TickleGestureRecognizer) {
+        self.hehePlayer?.play()
     }
     
     override func didReceiveMemoryWarning() {
@@ -57,6 +66,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func handlePan(_ sender: UIPanGestureRecognizer) {
+        
+        //Comment for Panning
+        //Uncomment for Tickling
+//        return
         
         let translation = sender.translation(in: self.view)
         if let view = sender.view {
