@@ -7,14 +7,45 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var chompPlayer:AVAudioPlayer?
+    
+    func loadSound(fileName:String) -> AVAudioPlayer {
+        
+        let url = Bundle.main.url(forResource: fileName as String, withExtension: "caf")
+//        var error:Error? = nil
+        let player = try! AVAudioPlayer(contentsOf: url!)
+        player.prepareToPlay()
+        return player
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //1
+        let filteredSubViews = self.view.subviews.filter({ $0.isKind(of: UIImageView.self)})
+        //2
+        for view in filteredSubViews {
+           //3
+            let recognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(recognizer:)))
+            //4
+            recognizer.delegate = self
+            view.addGestureRecognizer(recognizer)
+            
+            //TODO: Add a custom gesture recognizer too
+        }
+        
+        self.chompPlayer = self.loadSound(fileName: "chomp")
     }
 
+    func handleTap(recognizer:UITapGestureRecognizer) {
+        self.chompPlayer?.play()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -70,5 +101,13 @@ class ViewController: UIViewController {
         
     }
 
+}
+
+extension ViewController : UIGestureRecognizerDelegate{
+    
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
 }
 
