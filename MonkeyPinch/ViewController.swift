@@ -13,6 +13,9 @@ class ViewController: UIViewController {
 
     var chompPlayer:AVAudioPlayer?
     
+    @IBOutlet var monkeyPan: UIPanGestureRecognizer!
+    @IBOutlet var bananaPan: UIPanGestureRecognizer!
+    
     func loadSound(fileName:String) -> AVAudioPlayer {
         
         let url = Bundle.main.url(forResource: fileName as String, withExtension: "caf")
@@ -37,6 +40,8 @@ class ViewController: UIViewController {
             view.addGestureRecognizer(recognizer)
             
             //TODO: Add a custom gesture recognizer too
+            recognizer.require(toFail: monkeyPan)
+            recognizer.require(toFail: bananaPan)
         }
         
         self.chompPlayer = self.loadSound(fileName: "chomp")
