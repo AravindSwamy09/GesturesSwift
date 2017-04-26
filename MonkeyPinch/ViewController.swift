@@ -52,6 +52,10 @@ class ViewController: UIViewController {
         self.hehePlayer = self.loadSound(fileName: "hehehe1")
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
     func handleTap(recognizer:UITapGestureRecognizer) {
         self.chompPlayer?.play()
     }
